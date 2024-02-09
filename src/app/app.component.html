@@ -4,13 +4,13 @@
 </header>
 
 <nav>
-  <a>Accueil</a>
-  <a>Liste de personnages</a>
-  <a>Fiche détaillée</a>
+  <a [routerLink] = "['index']">Accueil</a>
+  <a [routerLink] = "['list']">Liste de personnages</a>
+  <a [routerLink] = "['details']">Fiche détaillée</a>
 </nav>
 
 <main>
-  <app-index></app-index>
+  <router-outlet></router-outlet>
 </main>
 
 <footer>

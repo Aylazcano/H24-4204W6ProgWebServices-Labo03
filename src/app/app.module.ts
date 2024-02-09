@@ -6,17 +6,28 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
 import { ListComponent } from './list/list.component';
+import { DetailsComponent } from './details/details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
-      IndexComponent,
-      ListComponent
-   ],
+    IndexComponent,
+    ListComponent,
+    DetailsComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // Regles de routage
+    RouterModule.forRoot([
+      { path: "", component: IndexComponent, pathMatch: "full" },
+      { path: "index", component: IndexComponent },
+      { path: "list", component: ListComponent },
+      { path: "details", component: DetailsComponent },
+      { path: ":ahem", component: IndexComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
