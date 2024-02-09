@@ -8,13 +8,15 @@ import { IndexComponent } from './index/index.component';
 import { ListComponent } from './list/list.component';
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     ListComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
